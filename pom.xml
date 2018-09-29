@@ -1,0 +1,20 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.soundon.group</groupId>
+  <artifactId>soundon-wall</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <name>Archetype - soundon-wall</name>
+  <url>http://maven.apache.org</url>
+  <packaging>pom</packaging>
+  <modules>
+  	<module>soundon-admin</module>
+  	<module>soundon-consumer-feign</module>
+  	<module>soundon-consumer-ribbon</module>
+  	<module>soundon-eureka</module>
+  	<module>soundon-monitor</module>
+  	<module>soundon-provider</module>
+  	<module>soundon-zipkin</module>
+  	<module>soundon-zuul</module>
+  </modules>
+</project>

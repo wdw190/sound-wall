@@ -1,0 +1,45 @@
+#服务注册地址
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+#端口号
+server:
+  port: 5000
+#应用程序名
+spring:
+  application:
+    name: service-zuul
+#上传链路信息的服务器地址
+  zipkin:
+    base-url: http://localhost:9411
+#以100%的概率将链路的数据上传给ZipKin Server
+  sleuth:
+    sampler:
+      percentage: 1.0
+#服务路由-
+zuul:
+  routes:
+#hiapi是自定义的 
+    hiapi:
+      path: /hiapi/**
+      serviceId: eureka-client
+#      url: http://localhost:8762  #这样写不会做负载均衡
+#      serviceId: hiapi-v1
+#ribbonapi是自定义的 
+    ribbonapi:
+      path: /ribbonapi/**
+      serviceId: eureka-ribbon-client
+#feignapi是自定义的 
+    feignapi:
+      path: /feignapi/**
+      serviceId: eureka-feign-client
+#      stripPrefix: false  有该字段，请求的"feignapi"会被转发到
+#zuul.prefix: /v1  #加个前缀
+#ribbon:
+#  eureka:
+#    enabled: false
+#
+#hiapi-v1:
+#  ribbon:
+#    listOfServers: http://localhost:8762,http://localhost:8763
