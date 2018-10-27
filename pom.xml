@@ -16,5 +16,21 @@
   	<module>soundon-provider</module>
   	<module>soundon-zipkin</module>
   	<module>soundon-zuul</module>
+  	<module>soundon-provider-device-01</module>
+	<module>soundon-provider-shenghong-detail</module>
+	<module>soundon-provider-shenghong-cycle</module>
+	<module>soundon-provider-shenghong-log</module>
+	<module>soundon-provider-shenghong-step-info</module>
+	<module>soundon-provider-shenghong-step-result</module>
+	<module>soundon-provider-shenghong-basic</module>
+	
+	<module>soundon-provider-suoying-data</module>
+	<module>soundon-provider-suoying-flow</module>
+	<module>soundon-provider-suoying-schemeresult</module>
+	<module>soundon-provider-suoying-step</module>
+	
+	
+	
+	
   </modules>
 </project>

@@ -17,7 +17,7 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://10.10.182.11:8761/serviceregistry/eureka/
   instance:
     metadata-map:
       user.name: admin
@@ -40,7 +40,9 @@ management:
     enabled: false
 #端口
 server:
+  context-path: /admin
   port: 5001
+#关闭基本身份验证
 security.basic.enabled: false
 #配置Security用户名和密码
 security:

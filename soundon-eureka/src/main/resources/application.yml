@@ -1,14 +1,10 @@
+#应用程序上下文路径
 #指定eureka server的端口号为8761
 server:
+  context-path: /serviceregistry
   port: 8761
 
-eureka:
-  instance:
-    hostname: localhost
-  client:
- #防止自己注册自己
-    registerWithEureka: false
-    fetchRegistry: false
-    serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
-
+#激活的配置文件
+spring:
+  profiles:
+    active: development
